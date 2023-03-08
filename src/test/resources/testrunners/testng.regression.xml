@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>	
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Ecommerce Website Test" thread-count='3' verbose='2'
+	parallel='tests'>
+
+	<listeners>
+		<listener
+			class-name="com.qa.tispring.testlistners.ExtentReportListener" />
+		<listener
+			class-name="com.qa.tispring.testlistners.TestAllureListener" />
+	</listeners>
+
+
+	<test name="LoginPage Test">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.qa.tispring.tests.LoginPageTest" />
+		</classes>
+
+	</test>
+
+	<test name="AccountPage Test">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="com.qa.tispring.tests.AccountsPageTest" />
+		</classes>
+
+	</test>
+
+	<test name="ProductInfoPage Test">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.qa.tispring.tests.ProductInfoPageTest" />
+		</classes>
+
+	</test>
+</suite> 
